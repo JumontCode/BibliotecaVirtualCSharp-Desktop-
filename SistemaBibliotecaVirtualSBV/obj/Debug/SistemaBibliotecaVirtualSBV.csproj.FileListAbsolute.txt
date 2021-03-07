@@ -1,0 +1,10 @@
+C:\Users\juan_\source\repos\SistemaBibliotecaVirtualSBV\SistemaBibliotecaVirtualSBV\obj\Debug\SistemaBibliotecaVirtualSBV.csprojAssemblyReference.cache
+C:\Users\juan_\source\repos\SistemaBibliotecaVirtualSBV\SistemaBibliotecaVirtualSBV\bin\Debug\SistemaBibliotecaVirtualSBV.exe.config
+C:\Users\juan_\source\repos\SistemaBibliotecaVirtualSBV\SistemaBibliotecaVirtualSBV\bin\Debug\SistemaBibliotecaVirtualSBV.exe
+C:\Users\juan_\source\repos\SistemaBibliotecaVirtualSBV\SistemaBibliotecaVirtualSBV\bin\Debug\SistemaBibliotecaVirtualSBV.pdb
+C:\Users\juan_\source\repos\SistemaBibliotecaVirtualSBV\SistemaBibliotecaVirtualSBV\obj\Debug\SistemaBibliotecaVirtualSBV.FormLibro.resources
+C:\Users\juan_\source\repos\SistemaBibliotecaVirtualSBV\SistemaBibliotecaVirtualSBV\obj\Debug\SistemaBibliotecaVirtualSBV.Properties.Resources.resources
+C:\Users\juan_\source\repos\SistemaBibliotecaVirtualSBV\SistemaBibliotecaVirtualSBV\obj\Debug\SistemaBibliotecaVirtualSBV.csproj.GenerateResource.cache
+C:\Users\juan_\source\repos\SistemaBibliotecaVirtualSBV\SistemaBibliotecaVirtualSBV\obj\Debug\SistemaBibliotecaVirtualSBV.csproj.CoreCompileInputs.cache
+C:\Users\juan_\source\repos\SistemaBibliotecaVirtualSBV\SistemaBibliotecaVirtualSBV\obj\Debug\SistemaBibliotecaVirtualSBV.exe
+C:\Users\juan_\source\repos\SistemaBibliotecaVirtualSBV\SistemaBibliotecaVirtualSBV\obj\Debug\SistemaBibliotecaVirtualSBV.pdb
