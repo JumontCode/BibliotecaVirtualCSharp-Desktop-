@@ -16,7 +16,7 @@ namespace SistemaBibliotecaVirtualSBV
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormLibro());
+            Application.Run(new MenuPrincipal());
         }
     }
 }
