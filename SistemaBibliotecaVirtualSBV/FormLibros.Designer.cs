@@ -57,9 +57,9 @@ namespace SistemaBibliotecaVirtualSBV
             this.label9 = new System.Windows.Forms.Label();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnSeleccionar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnSalir = new System.Windows.Forms.Button();
+            this.btnVolver = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -74,11 +74,11 @@ namespace SistemaBibliotecaVirtualSBV
             this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnActualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActualizar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnActualizar.Location = new System.Drawing.Point(606, 385);
+            this.btnActualizar.Location = new System.Drawing.Point(618, 384);
             this.btnActualizar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(95, 43);
-            this.btnActualizar.TabIndex = 268;
+            this.btnActualizar.Size = new System.Drawing.Size(95, 27);
+            this.btnActualizar.TabIndex = 15;
             this.btnActualizar.Text = "Actualizar ";
             this.btnActualizar.UseVisualStyleBackColor = false;
             this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
@@ -87,12 +87,17 @@ namespace SistemaBibliotecaVirtualSBV
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.Silver;
+            this.dataGridView1.AllowUserToResizeColumns = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(396, 122);
+            this.dataGridView1.Location = new System.Drawing.Point(379, 124);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.ShowEditingIcon = false;
             this.dataGridView1.Size = new System.Drawing.Size(455, 245);
             this.dataGridView1.TabIndex = 260;
             // 
@@ -123,7 +128,7 @@ namespace SistemaBibliotecaVirtualSBV
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Location = new System.Drawing.Point(11, 91);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(378, 318);
+            this.groupBox1.Size = new System.Drawing.Size(363, 320);
             this.groupBox1.TabIndex = 267;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos";
@@ -169,7 +174,7 @@ namespace SistemaBibliotecaVirtualSBV
             this.txtEdicion.Location = new System.Drawing.Point(181, 229);
             this.txtEdicion.Name = "txtEdicion";
             this.txtEdicion.Size = new System.Drawing.Size(165, 21);
-            this.txtEdicion.TabIndex = 236;
+            this.txtEdicion.TabIndex = 9;
             // 
             // label4
             // 
@@ -214,15 +219,16 @@ namespace SistemaBibliotecaVirtualSBV
             this.txtAutor.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtAutor.Name = "txtAutor";
             this.txtAutor.Size = new System.Drawing.Size(165, 20);
-            this.txtAutor.TabIndex = 203;
+            this.txtAutor.TabIndex = 3;
             // 
             // txtFechaPublicacion
             // 
             this.txtFechaPublicacion.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.txtFechaPublicacion.Location = new System.Drawing.Point(181, 205);
+            this.txtFechaPublicacion.MaxDate = new System.DateTime(2040, 12, 31, 0, 0, 0, 0);
             this.txtFechaPublicacion.Name = "txtFechaPublicacion";
             this.txtFechaPublicacion.Size = new System.Drawing.Size(165, 20);
-            this.txtFechaPublicacion.TabIndex = 230;
+            this.txtFechaPublicacion.TabIndex = 8;
             // 
             // txtIdLibro
             // 
@@ -231,15 +237,17 @@ namespace SistemaBibliotecaVirtualSBV
             this.txtIdLibro.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtIdLibro.Name = "txtIdLibro";
             this.txtIdLibro.Size = new System.Drawing.Size(165, 20);
-            this.txtIdLibro.TabIndex = 201;
+            this.txtIdLibro.TabIndex = 1;
             // 
             // txtFechaEdicion
             // 
             this.txtFechaEdicion.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.txtFechaEdicion.Location = new System.Drawing.Point(181, 179);
+            this.txtFechaEdicion.MaxDate = new System.DateTime(2040, 12, 31, 0, 0, 0, 0);
+            this.txtFechaEdicion.MinDate = new System.DateTime(1759, 1, 1, 0, 0, 0, 0);
             this.txtFechaEdicion.Name = "txtFechaEdicion";
             this.txtFechaEdicion.Size = new System.Drawing.Size(165, 20);
-            this.txtFechaEdicion.TabIndex = 229;
+            this.txtFechaEdicion.TabIndex = 7;
             // 
             // txtCategoria
             // 
@@ -342,7 +350,7 @@ namespace SistemaBibliotecaVirtualSBV
             this.txtCategoria.Location = new System.Drawing.Point(181, 95);
             this.txtCategoria.Name = "txtCategoria";
             this.txtCategoria.Size = new System.Drawing.Size(165, 21);
-            this.txtCategoria.TabIndex = 210;
+            this.txtCategoria.TabIndex = 4;
             // 
             // label6
             // 
@@ -363,7 +371,7 @@ namespace SistemaBibliotecaVirtualSBV
             this.txtNombreLibro.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtNombreLibro.Name = "txtNombreLibro";
             this.txtNombreLibro.Size = new System.Drawing.Size(165, 20);
-            this.txtNombreLibro.TabIndex = 202;
+            this.txtNombreLibro.TabIndex = 2;
             // 
             // txtNumPagina
             // 
@@ -372,14 +380,14 @@ namespace SistemaBibliotecaVirtualSBV
             this.txtNumPagina.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtNumPagina.Name = "txtNumPagina";
             this.txtNumPagina.Size = new System.Drawing.Size(165, 20);
-            this.txtNumPagina.TabIndex = 226;
+            this.txtNumPagina.TabIndex = 5;
             // 
             // txtCodigoEditorial
             // 
             this.txtCodigoEditorial.Location = new System.Drawing.Point(181, 151);
             this.txtCodigoEditorial.Name = "txtCodigoEditorial";
             this.txtCodigoEditorial.Size = new System.Drawing.Size(165, 20);
-            this.txtCodigoEditorial.TabIndex = 217;
+            this.txtCodigoEditorial.TabIndex = 6;
             // 
             // label12
             // 
@@ -400,7 +408,7 @@ namespace SistemaBibliotecaVirtualSBV
             this.txtIdioma.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtIdioma.Name = "txtIdioma";
             this.txtIdioma.Size = new System.Drawing.Size(165, 20);
-            this.txtIdioma.TabIndex = 218;
+            this.txtIdioma.TabIndex = 10;
             // 
             // label11
             // 
@@ -421,7 +429,7 @@ namespace SistemaBibliotecaVirtualSBV
             this.txtEjemplares.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtEjemplares.Name = "txtEjemplares";
             this.txtEjemplares.Size = new System.Drawing.Size(165, 20);
-            this.txtEjemplares.TabIndex = 219;
+            this.txtEjemplares.TabIndex = 11;
             // 
             // label10
             // 
@@ -468,10 +476,10 @@ namespace SistemaBibliotecaVirtualSBV
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
-            this.btnBuscar.Location = new System.Drawing.Point(665, 96);
+            this.btnBuscar.Location = new System.Drawing.Point(648, 98);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(36, 20);
-            this.btnBuscar.TabIndex = 264;
+            this.btnBuscar.TabIndex = 18;
             this.btnBuscar.UseVisualStyleBackColor = false;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
@@ -483,29 +491,32 @@ namespace SistemaBibliotecaVirtualSBV
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnGuardar.Location = new System.Drawing.Point(396, 385);
+            this.btnGuardar.Location = new System.Drawing.Point(380, 384);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(93, 43);
-            this.btnGuardar.TabIndex = 265;
+            this.btnGuardar.Size = new System.Drawing.Size(93, 27);
+            this.btnGuardar.TabIndex = 13;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // button3
+            // btnSeleccionar
             // 
-            this.button3.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button3.Location = new System.Drawing.Point(749, 446);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(102, 43);
-            this.button3.TabIndex = 263;
-            this.button3.Text = "Ver Registros";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnSeleccionar.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnSeleccionar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSeleccionar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSeleccionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSeleccionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSeleccionar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnSeleccionar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSeleccionar.Location = new System.Drawing.Point(739, 384);
+            this.btnSeleccionar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnSeleccionar.Name = "btnSeleccionar";
+            this.btnSeleccionar.Size = new System.Drawing.Size(95, 27);
+            this.btnSeleccionar.TabIndex = 16;
+            this.btnSeleccionar.Text = "Seleccionar";
+            this.btnSeleccionar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSeleccionar.UseVisualStyleBackColor = false;
+            this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
             // 
             // btnEliminar
             // 
@@ -515,65 +526,71 @@ namespace SistemaBibliotecaVirtualSBV
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnEliminar.Location = new System.Drawing.Point(501, 385);
+            this.btnEliminar.Location = new System.Drawing.Point(499, 384);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(93, 43);
-            this.btnEliminar.TabIndex = 266;
+            this.btnEliminar.Size = new System.Drawing.Size(93, 27);
+            this.btnEliminar.TabIndex = 14;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
-            // btnSalir
+            // btnVolver
             // 
-            this.btnSalir.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalir.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnSalir.Location = new System.Drawing.Point(713, 385);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(95, 43);
-            this.btnSalir.TabIndex = 262;
-            this.btnSalir.Text = "Salir";
-            this.btnSalir.UseVisualStyleBackColor = false;
+            this.btnVolver.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnVolver.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnVolver.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVolver.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnVolver.Image = ((System.Drawing.Image)(resources.GetObject("btnVolver.Image")));
+            this.btnVolver.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnVolver.Location = new System.Drawing.Point(11, 27);
+            this.btnVolver.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(77, 27);
+            this.btnVolver.TabIndex = 12;
+            this.btnVolver.Text = "Volver";
+            this.btnVolver.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnVolver.UseVisualStyleBackColor = false;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Lucida Bright", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label16.Location = new System.Drawing.Point(315, 6);
+            this.label16.Font = new System.Drawing.Font("Lucida Handwriting", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label16.Location = new System.Drawing.Point(307, 27);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(263, 72);
+            this.label16.Size = new System.Drawing.Size(230, 63);
             this.label16.TabIndex = 269;
             this.label16.Text = "LIBROS";
             // 
             // txtBuscar
             // 
             this.txtBuscar.BackColor = System.Drawing.Color.White;
-            this.txtBuscar.Location = new System.Drawing.Point(396, 96);
+            this.txtBuscar.Location = new System.Drawing.Point(379, 98);
             this.txtBuscar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(271, 20);
-            this.txtBuscar.TabIndex = 261;
+            this.txtBuscar.TabIndex = 17;
             // 
             // FormLibro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(880, 501);
+            this.ClientSize = new System.Drawing.Size(844, 431);
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.btnGuardar);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btnSeleccionar);
             this.Controls.Add(this.btnEliminar);
-            this.Controls.Add(this.btnSalir);
+            this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.txtBuscar);
+            this.MaximumSize = new System.Drawing.Size(860, 470);
+            this.MinimumSize = new System.Drawing.Size(860, 470);
             this.Name = "FormLibro";
             this.Text = "FORMULARIO LIBROS";
             this.Load += new System.EventHandler(this.FormLibro_Load);
@@ -614,9 +631,9 @@ namespace SistemaBibliotecaVirtualSBV
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnSeleccionar;
         private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Button btnVolver;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TextBox txtBuscar;
     }

@@ -48,6 +48,15 @@ namespace SistemaBibliotecaVirtualSBV
             return con;
         }
 
+        private void SeleccionarLector()
+        {
+            txtId.Text = dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells[0].Value.ToString();
+            txtCedula.Text = dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells[1].Value.ToString();
+            txtNombre.Text = dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells[2].Value.ToString();
+            txtTelefono.Text = dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells[3].Value.ToString();
+            txtDireccion.Text = dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells[4].Value.ToString();
+        }
+
         private void IngresarNuevoLector()
         {
             SqlConnection con = new SqlConnection(Conexion());
@@ -146,9 +155,7 @@ namespace SistemaBibliotecaVirtualSBV
             DataTable dt = new DataTable();
 
             da.Fill(dt);
-            dg.DataSource = dt;
-
-            
+            dg.DataSource = dt;            
         }
 
         private void LimpiarTxt()
@@ -170,18 +177,30 @@ namespace SistemaBibliotecaVirtualSBV
             }
         }
 
-        private void btnSalir_Click(object sender, EventArgs e)
+        private void FormLector_FormClosing(object sender, FormClosingEventArgs e)
         {
-            MenuPrincipal MP = new MenuPrincipal();
-            
-            this.Close();
 
+            MenuPrincipal MP = new MenuPrincipal();
+            MP.Show();
+            this.Close();
         }
 
-        private void FormLector_FormClosing(object sender, FormClosingEventArgs e)
+        private void FormLector_FormClosed(object sender, FormClosedEventArgs e)
         {
             MenuPrincipal MP = new MenuPrincipal();
             MP.Show();
+        }
+
+        private void btnSeleccionar_Click(object sender, EventArgs e)
+        {
+            SeleccionarLector();
+        }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            MenuPrincipal MenPri = new MenuPrincipal();
+            this.Hide();
+            MenPri.Show();
         }
     }
 }

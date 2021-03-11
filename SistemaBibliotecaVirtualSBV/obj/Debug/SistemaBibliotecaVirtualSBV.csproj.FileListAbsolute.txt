@@ -11,3 +11,4 @@ C:\Users\juan_\source\repos\SistemaBibliotecaVirtualSBV\SistemaBibliotecaVirtual
 C:\Users\juan_\source\repos\SistemaBibliotecaVirtualSBV\SistemaBibliotecaVirtualSBV\obj\Debug\SistemaBibliotecaVirtualSBV.FormLector.resources
 C:\Users\juan_\source\repos\SistemaBibliotecaVirtualSBV\SistemaBibliotecaVirtualSBV\obj\Debug\SistemaBibliotecaVirtualSBV.FormPrestamo.resources
 C:\Users\juan_\source\repos\SistemaBibliotecaVirtualSBV\SistemaBibliotecaVirtualSBV\obj\Debug\SistemaBibliotecaVirtualSBV.MenuPrincipal.resources
+C:\Users\juan_\source\repos\SistemaBibliotecaVirtualSBV\SistemaBibliotecaVirtualSBV\obj\Debug\SistemaBibliotecaVirtualSBV.FormLogin.resources

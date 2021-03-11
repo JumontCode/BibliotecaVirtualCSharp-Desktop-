@@ -28,5 +28,45 @@ namespace SistemaBibliotecaVirtualSBV
         {
 
         }
+
+        private void btnRegistrar_Click(object sender, EventArgs e)
+        {
+            if (panelSubMenuRegistrar.Visible == true)
+            {
+                //CerrarPanel();
+                panelSubMenuRegistrar.Visible = false;
+            }
+            else
+            {
+                //AbrirPanel();
+                panelSubMenuRegistrar.Visible = true;
+            }
+        }
+
+        
+
+        private void MenuPrincipal_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnLibros_Click(object sender, EventArgs e)
+        {
+            FormLibro FL = new FormLibro();
+            this.Hide();
+            FL.Show();
+        }
+
+        //private void btnOperaciones_Click(object sender, EventArgs e)
+        //{
+        //    if (panelSubMenuOperaciones.Visible == true)
+        //    {
+        //        panelSubMenuOperaciones.Visible = false;
+        //    }
+        //    else
+        //    {
+        //        panelSubMenuOperaciones.Visible = true;
+        //    }
+        //}
     }
 }

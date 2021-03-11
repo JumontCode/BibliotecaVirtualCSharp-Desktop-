@@ -29,9 +29,8 @@ namespace SistemaBibliotecaVirtualSBV
             SqlConnection con = new SqlConnection(Conexion());
             try
             {
-                SqlCommand cmd = new SqlCommand("GuardarOModificarLibro", con);
+                SqlCommand cmd = new SqlCommand("InsertarLibro", con);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@IdLibro", txtIdLibro.Text);
                 cmd.Parameters.AddWithValue("@Titulo", txtNombreLibro.Text);
                 cmd.Parameters.AddWithValue("@IdAutor1", txtAutor.Text);
                 cmd.Parameters.AddWithValue("@IdCategoria1", txtCategoria.Text);
@@ -154,6 +153,22 @@ namespace SistemaBibliotecaVirtualSBV
                 MostrarLibros(dataGridView1);
             }
         }
+
+        private void SeleccionarDatosDg()
+        {
+            txtIdLibro.Text = dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells[0].Value.ToString();
+            txtNombreLibro.Text = dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells[1].Value.ToString();
+            txtAutor.Text = dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells[2].Value.ToString();
+            txtCategoria.Text = dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells[3].Value.ToString();
+            txtNumPagina.Text = dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells[4].Value.ToString();
+            txtCodigoEditorial.Text = dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells[5].Value.ToString();
+            txtFechaEdicion.Text = dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells[6].Value.ToString();
+            txtFechaPublicacion.Text = dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells[7].Value.ToString();
+            txtEdicion.Text = dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells[8].Value.ToString();
+            txtIdioma.Text = dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells[9].Value.ToString();
+            txtEjemplares.Text = dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells[10].Value.ToString();
+            txtIdLibro.Focus();
+        }
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             IngresarNuevoLibro();
@@ -183,6 +198,18 @@ namespace SistemaBibliotecaVirtualSBV
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             BuscarLibro(dataGridView1);
+        }
+
+        private void btnSeleccionar_Click(object sender, EventArgs e)
+        {
+            SeleccionarDatosDg();
+        }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            MenuPrincipal MenPri = new MenuPrincipal();
+            this.Close();
+            MenPri.Show();
         }
     }
 }

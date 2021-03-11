@@ -46,17 +46,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="FormLibros.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FormLibros.Designer.cs">
+      <DependentUpon>FormLibros.cs</DependentUpon>
     </Compile>
     <Compile Include="FormLector.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormLector.Designer.cs">
       <DependentUpon>FormLector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="FormPrestamo.cs">
       <SubType>Form</SubType>
@@ -72,11 +78,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Utilidades.cs" />
+    <EmbeddedResource Include="FormLibros.resx">
+      <DependentUpon>FormLibros.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLector.resx">
       <DependentUpon>FormLector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormPrestamo.resx">
       <DependentUpon>FormPrestamo.cs</DependentUpon>
