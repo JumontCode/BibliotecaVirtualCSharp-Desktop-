@@ -56,17 +56,5 @@ namespace SistemaBibliotecaVirtualSBV
             this.Hide();
             FL.Show();
         }
-
-        //private void btnOperaciones_Click(object sender, EventArgs e)
-        //{
-        //    if (panelSubMenuOperaciones.Visible == true)
-        //    {
-        //        panelSubMenuOperaciones.Visible = false;
-        //    }
-        //    else
-        //    {
-        //        panelSubMenuOperaciones.Visible = true;
-        //    }
-        //}
     }
 }

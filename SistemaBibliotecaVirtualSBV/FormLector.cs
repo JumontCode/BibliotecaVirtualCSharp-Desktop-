@@ -127,7 +127,7 @@ namespace SistemaBibliotecaVirtualSBV
             }
             catch (Exception e)
             {
-                MessageBox.Show("Ha ocurrido un error" + e.Message);
+                MessageBox.Show("Ha ocurrido un error", "AVISO", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 con.Close();
             }
         }
@@ -170,10 +170,13 @@ namespace SistemaBibliotecaVirtualSBV
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            BuscarLector(dataGridView1);
             if (txtBuscar.Text == "")
             {
                 MostrarLectores(dataGridView1);
+            }
+            else
+            {
+            BuscarLector(dataGridView1);
             }
         }
 
