@@ -1,13 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace SistemaBibliotecaVirtualSBV
 {
@@ -42,15 +36,15 @@ namespace SistemaBibliotecaVirtualSBV
         }
 
         private void InsertarUsuario()
-        {                
+        {
             SqlConnection con = new SqlConnection(Conexion());
             try
             {
                 SqlCommand cmd = new SqlCommand("InsertarUsuario", con);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@NombreUsuario",txtNombre.Text);
-                cmd.Parameters.AddWithValue("@Cuenta",txtNombre.Text);
-                cmd.Parameters.AddWithValue("@Contraseña",txtNombre.Text);
+                cmd.Parameters.AddWithValue("@NombreUsuario", txtNombre.Text);
+                cmd.Parameters.AddWithValue("@Cuenta", txtNombre.Text);
+                cmd.Parameters.AddWithValue("@Contraseña", txtNombre.Text);
 
                 con.Open();
                 cmd.ExecuteNonQuery();
@@ -114,16 +108,16 @@ namespace SistemaBibliotecaVirtualSBV
 
         private void BuscarUsuario(DataGridView dg)
         {
-                SqlConnection con = new SqlConnection(Conexion());
-                SqlCommand cmd = new SqlCommand("BuscarUsuario", con);
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@NombreUsuario", txtBuscar.Text);
-                cmd.CommandType = CommandType.StoredProcedure;
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-                DataTable dt = new DataTable();
+            SqlConnection con = new SqlConnection(Conexion());
+            SqlCommand cmd = new SqlCommand("BuscarUsuario", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@NombreUsuario", txtBuscar.Text);
+            cmd.CommandType = CommandType.StoredProcedure;
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
 
-                da.Fill(dt);
-                dg.DataSource = dt;
+            da.Fill(dt);
+            dg.DataSource = dt;
         }
 
         private void LimpiarTxt()
@@ -190,6 +184,20 @@ namespace SistemaBibliotecaVirtualSBV
             {
                 BuscarUsuario(dataGridView1);
             }
+        }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            MenuPrincipal MenPri = new MenuPrincipal();
+            this.Hide();
+            MenPri.Show();
+        }
+
+        private void FormUsuario_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            MenuPrincipal MenPri = new MenuPrincipal();
+            this.Close();
+            MenPri.Show();
         }
     }
 }

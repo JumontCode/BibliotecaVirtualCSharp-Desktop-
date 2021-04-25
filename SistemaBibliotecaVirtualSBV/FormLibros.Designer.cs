@@ -179,11 +179,11 @@ namespace SistemaBibliotecaVirtualSBV
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(46, 152);
+            this.label5.Location = new System.Drawing.Point(105, 152);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(132, 18);
+            this.label5.Size = new System.Drawing.Size(75, 18);
             this.label5.TabIndex = 214;
-            this.label5.Text = "Codigo editorial:";
+            this.label5.Text = "Editorial:";
             // 
             // label7
             // 
@@ -380,7 +380,7 @@ namespace SistemaBibliotecaVirtualSBV
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(59, 278);
+            this.label12.Location = new System.Drawing.Point(66, 278);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(114, 18);
             this.label12.TabIndex = 225;
@@ -401,7 +401,7 @@ namespace SistemaBibliotecaVirtualSBV
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(111, 254);
+            this.label11.Location = new System.Drawing.Point(117, 254);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(63, 18);
             this.label11.TabIndex = 224;
@@ -422,7 +422,7 @@ namespace SistemaBibliotecaVirtualSBV
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(106, 228);
+            this.label10.Location = new System.Drawing.Point(111, 228);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(69, 18);
             this.label10.TabIndex = 223;
@@ -434,7 +434,7 @@ namespace SistemaBibliotecaVirtualSBV
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(37, 178);
+            this.label8.Location = new System.Drawing.Point(39, 178);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(141, 18);
             this.label8.TabIndex = 221;
@@ -446,11 +446,11 @@ namespace SistemaBibliotecaVirtualSBV
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(6, 204);
+            this.label9.Location = new System.Drawing.Point(80, 204);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(172, 18);
+            this.label9.Size = new System.Drawing.Size(100, 18);
             this.label9.TabIndex = 222;
-            this.label9.Text = "Fecha de publicacion:";
+            this.label9.Text = "Publicacion:";
             // 
             // btnBuscar
             // 
@@ -526,6 +526,7 @@ namespace SistemaBibliotecaVirtualSBV
             this.btnActualizar.Text = "Actualizar ";
             this.btnActualizar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnActualizar.UseVisualStyleBackColor = false;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click_1);
             // 
             // btnGuardar
             // 
@@ -544,6 +545,7 @@ namespace SistemaBibliotecaVirtualSBV
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click_1);
             // 
             // btnEliminar
             // 
@@ -562,6 +564,7 @@ namespace SistemaBibliotecaVirtualSBV
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click_1);
             // 
             // btnSeleccionar
             // 
@@ -581,6 +584,7 @@ namespace SistemaBibliotecaVirtualSBV
             this.btnSeleccionar.Text = "Seleccion";
             this.btnSeleccionar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSeleccionar.UseVisualStyleBackColor = false;
+            this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click_1);
             // 
             // pictureBox1
             // 
@@ -613,6 +617,7 @@ namespace SistemaBibliotecaVirtualSBV
             this.MinimumSize = new System.Drawing.Size(860, 470);
             this.Name = "FormLibro";
             this.Text = "FORMULARIO LIBROS";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormLibro_FormClosing);
             this.Load += new System.EventHandler(this.FormLibro_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);

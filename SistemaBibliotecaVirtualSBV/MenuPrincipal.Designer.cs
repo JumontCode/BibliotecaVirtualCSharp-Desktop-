@@ -30,7 +30,7 @@ namespace SistemaBibliotecaVirtualSBV
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuPrincipal));
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnUsuarios = new System.Windows.Forms.Button();
             this.btnLibros = new System.Windows.Forms.Button();
             this.btnLector = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -42,12 +42,14 @@ namespace SistemaBibliotecaVirtualSBV
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.CerrarSesion = new System.Windows.Forms.Button();
+            this.btnPrestar = new System.Windows.Forms.Button();
+            this.btnDevolverLibro = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnMinimizar = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panelSubMenuRegistrar.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -56,25 +58,27 @@ namespace SistemaBibliotecaVirtualSBV
             this.groupBox1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button3
+            // btnUsuarios
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Coral;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.OrangeRed;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(2, 50);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(175, 47);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Usuarios";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnUsuarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnUsuarios.FlatAppearance.BorderSize = 0;
+            this.btnUsuarios.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Coral;
+            this.btnUsuarios.FlatAppearance.MouseOverBackColor = System.Drawing.Color.OrangeRed;
+            this.btnUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUsuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUsuarios.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnUsuarios.Image = ((System.Drawing.Image)(resources.GetObject("btnUsuarios.Image")));
+            this.btnUsuarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUsuarios.Location = new System.Drawing.Point(2, 50);
+            this.btnUsuarios.Name = "btnUsuarios";
+            this.btnUsuarios.Size = new System.Drawing.Size(175, 47);
+            this.btnUsuarios.TabIndex = 3;
+            this.btnUsuarios.Text = "Usuarios";
+            this.btnUsuarios.UseVisualStyleBackColor = false;
+            this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
             // 
             // btnLibros
             // 
@@ -117,9 +121,9 @@ namespace SistemaBibliotecaVirtualSBV
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(732, 27);
+            this.pictureBox2.Location = new System.Drawing.Point(3, 27);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(100, 45);
+            this.pictureBox2.Size = new System.Drawing.Size(191, 54);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 10;
             this.pictureBox2.TabStop = false;
@@ -128,7 +132,7 @@ namespace SistemaBibliotecaVirtualSBV
             // 
             this.panelSubMenuRegistrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(86)))), ((int)(((byte)(141)))));
             this.panelSubMenuRegistrar.Controls.Add(this.btnLibros);
-            this.panelSubMenuRegistrar.Controls.Add(this.button3);
+            this.panelSubMenuRegistrar.Controls.Add(this.btnUsuarios);
             this.panelSubMenuRegistrar.Controls.Add(this.btnLector);
             this.panelSubMenuRegistrar.Location = new System.Drawing.Point(3, 3);
             this.panelSubMenuRegistrar.Name = "panelSubMenuRegistrar";
@@ -159,9 +163,13 @@ namespace SistemaBibliotecaVirtualSBV
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToResizeColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.Size = new System.Drawing.Size(715, 461);
             this.dataGridView1.TabIndex = 11;
             // 
@@ -172,7 +180,7 @@ namespace SistemaBibliotecaVirtualSBV
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Location = new System.Drawing.Point(2, 79);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(192, 461);
+            this.groupBox1.Size = new System.Drawing.Size(192, 460);
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
             // 
@@ -183,7 +191,7 @@ namespace SistemaBibliotecaVirtualSBV
             this.flowLayoutPanel2.Controls.Add(this.panel1);
             this.flowLayoutPanel2.Location = new System.Drawing.Point(4, 64);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(186, 391);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(186, 334);
             this.flowLayoutPanel2.TabIndex = 14;
             // 
             // label2
@@ -200,66 +208,70 @@ namespace SistemaBibliotecaVirtualSBV
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button4);
+            this.panel1.Controls.Add(this.CerrarSesion);
+            this.panel1.Controls.Add(this.btnPrestar);
+            this.panel1.Controls.Add(this.btnDevolverLibro);
             this.panel1.Location = new System.Drawing.Point(3, 181);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(179, 193);
+            this.panel1.Size = new System.Drawing.Size(179, 150);
             this.panel1.TabIndex = 11;
             // 
-            // button1
+            // CerrarSesion
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Coral;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.OrangeRed;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(2, 99);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(175, 47);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "About";
-            this.button1.UseVisualStyleBackColor = false;
+            this.CerrarSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.CerrarSesion.FlatAppearance.BorderSize = 0;
+            this.CerrarSesion.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Coral;
+            this.CerrarSesion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.OrangeRed;
+            this.CerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CerrarSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CerrarSesion.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.CerrarSesion.Image = ((System.Drawing.Image)(resources.GetObject("CerrarSesion.Image")));
+            this.CerrarSesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.CerrarSesion.Location = new System.Drawing.Point(2, 99);
+            this.CerrarSesion.Name = "CerrarSesion";
+            this.CerrarSesion.Size = new System.Drawing.Size(175, 47);
+            this.CerrarSesion.TabIndex = 9;
+            this.CerrarSesion.Text = "Log Out";
+            this.CerrarSesion.UseVisualStyleBackColor = false;
+            this.CerrarSesion.Click += new System.EventHandler(this.CerrarSesion_Click);
             // 
-            // button2
+            // btnPrestar
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Coral;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.OrangeRed;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(2, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(175, 47);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "Prestar";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnPrestar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnPrestar.FlatAppearance.BorderSize = 0;
+            this.btnPrestar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Coral;
+            this.btnPrestar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.OrangeRed;
+            this.btnPrestar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrestar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrestar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnPrestar.Image = ((System.Drawing.Image)(resources.GetObject("btnPrestar.Image")));
+            this.btnPrestar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPrestar.Location = new System.Drawing.Point(2, 3);
+            this.btnPrestar.Name = "btnPrestar";
+            this.btnPrestar.Size = new System.Drawing.Size(175, 47);
+            this.btnPrestar.TabIndex = 6;
+            this.btnPrestar.Text = "Prestar";
+            this.btnPrestar.UseVisualStyleBackColor = false;
+            this.btnPrestar.Click += new System.EventHandler(this.btnPrestar_Click);
             // 
-            // button4
+            // btnDevolverLibro
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Coral;
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.OrangeRed;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(2, 51);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(175, 47);
-            this.button4.TabIndex = 7;
-            this.button4.Text = "Devolver";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnDevolverLibro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnDevolverLibro.FlatAppearance.BorderSize = 0;
+            this.btnDevolverLibro.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Coral;
+            this.btnDevolverLibro.FlatAppearance.MouseOverBackColor = System.Drawing.Color.OrangeRed;
+            this.btnDevolverLibro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDevolverLibro.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDevolverLibro.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnDevolverLibro.Image = ((System.Drawing.Image)(resources.GetObject("btnDevolverLibro.Image")));
+            this.btnDevolverLibro.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDevolverLibro.Location = new System.Drawing.Point(2, 51);
+            this.btnDevolverLibro.Name = "btnDevolverLibro";
+            this.btnDevolverLibro.Size = new System.Drawing.Size(175, 47);
+            this.btnDevolverLibro.TabIndex = 7;
+            this.btnDevolverLibro.Text = "Devolver";
+            this.btnDevolverLibro.UseVisualStyleBackColor = false;
+            this.btnDevolverLibro.Click += new System.EventHandler(this.btnDevolverLibro_Click);
             // 
             // label3
             // 
@@ -278,21 +290,46 @@ namespace SistemaBibliotecaVirtualSBV
             // 
             this.label1.AutoSize = true;
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Lucida Handwriting", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(193, 50);
+            this.label1.Location = new System.Drawing.Point(192, 44);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(471, 25);
+            this.label1.Size = new System.Drawing.Size(628, 31);
             this.label1.TabIndex = 10;
             this.label1.Text = "SISTEMA ADMINISTRACION DE BIBLIOTECA";
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(129)))), ((int)(((byte)(26)))));
+            this.panel3.Controls.Add(this.btnMinimizar);
+            this.panel3.Controls.Add(this.btnSalir);
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(916, 21);
             this.panel3.TabIndex = 12;
+            this.panel3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseDown);
+            // 
+            // btnMinimizar
+            // 
+            this.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMinimizar.Location = new System.Drawing.Point(851, 0);
+            this.btnMinimizar.Name = "btnMinimizar";
+            this.btnMinimizar.Size = new System.Drawing.Size(32, 21);
+            this.btnMinimizar.TabIndex = 15;
+            this.btnMinimizar.Text = "-";
+            this.btnMinimizar.UseVisualStyleBackColor = true;
+            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalir.Location = new System.Drawing.Point(883, 0);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(32, 21);
+            this.btnSalir.TabIndex = 14;
+            this.btnSalir.Text = "X";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // MenuPrincipal
             // 
@@ -319,12 +356,13 @@ namespace SistemaBibliotecaVirtualSBV
             this.flowLayoutPanel2.ResumeLayout(false);
             this.flowLayoutPanel2.PerformLayout();
             this.panel1.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnUsuarios;
         private System.Windows.Forms.Button btnLibros;
         private System.Windows.Forms.Button btnLector;
         private System.Windows.Forms.PictureBox pictureBox2;
@@ -333,14 +371,16 @@ namespace SistemaBibliotecaVirtualSBV
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnPrestar;
+        private System.Windows.Forms.Button btnDevolverLibro;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btnMinimizar;
+        private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Button CerrarSesion;
     }
 }

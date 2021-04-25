@@ -14,7 +14,6 @@ namespace SistemaBibliotecaVirtualSBV
 {
     public partial class FormLogin : Form
     {
-
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
@@ -71,12 +70,16 @@ namespace SistemaBibliotecaVirtualSBV
                     this.Hide();
                     MenPri.Show();
                 }
-
             }
             catch (Exception er)
             {
                 MessageBox.Show("Usuario o contraseña incorrectos! ", "AVISO", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void FormLogin_Load(object sender, EventArgs e)
+        {
+            txtUsuario.Focus();
         }
     }
 }

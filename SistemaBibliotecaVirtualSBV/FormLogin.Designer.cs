@@ -70,7 +70,7 @@ namespace SistemaBibliotecaVirtualSBV
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.PasswordChar = '*';
             this.txtContraseña.Size = new System.Drawing.Size(185, 20);
-            this.txtContraseña.TabIndex = 9;
+            this.txtContraseña.TabIndex = 2;
             // 
             // label2
             // 
@@ -89,7 +89,7 @@ namespace SistemaBibliotecaVirtualSBV
             this.txtUsuario.Location = new System.Drawing.Point(167, 40);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(185, 20);
-            this.txtUsuario.TabIndex = 8;
+            this.txtUsuario.TabIndex = 1;
             // 
             // label1
             // 
@@ -114,7 +114,7 @@ namespace SistemaBibliotecaVirtualSBV
             this.btnIniciar.Location = new System.Drawing.Point(168, 127);
             this.btnIniciar.Name = "btnIniciar";
             this.btnIniciar.Size = new System.Drawing.Size(91, 22);
-            this.btnIniciar.TabIndex = 13;
+            this.btnIniciar.TabIndex = 3;
             this.btnIniciar.Text = "Iniciar";
             this.btnIniciar.UseVisualStyleBackColor = true;
             this.btnIniciar.Click += new System.EventHandler(this.btnIniciar_Click);
@@ -131,7 +131,7 @@ namespace SistemaBibliotecaVirtualSBV
             this.btnSalir.Location = new System.Drawing.Point(261, 127);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(91, 22);
-            this.btnSalir.TabIndex = 13;
+            this.btnSalir.TabIndex = 4;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
@@ -247,6 +247,7 @@ namespace SistemaBibliotecaVirtualSBV
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormLogin";
             this.Text = "FormLogin";
+            this.Load += new System.EventHandler(this.FormLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.PanelCabecera.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();

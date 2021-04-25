@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Runtime.InteropServices;
 
 namespace SistemaBibliotecaVirtualSBV
 {
@@ -18,6 +19,17 @@ namespace SistemaBibliotecaVirtualSBV
             InitializeComponent();
         }
 
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg,
+        int wParam, int lParam);
+
+        private void Mover()
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
 
         private void FormLector_Load(object sender, EventArgs e)
         {
@@ -28,18 +40,21 @@ namespace SistemaBibliotecaVirtualSBV
         {
             IngresarNuevoLector();
             MostrarLectores(dataGridView1);
+            LimpiarTxt();
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             EliminarLector();
             MostrarLectores(dataGridView1);
+            LimpiarTxt();
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
             ModificarLector();
             MostrarLectores(dataGridView1);
+            LimpiarTxt();
         }
 
         private string Conexion()
@@ -63,8 +78,7 @@ namespace SistemaBibliotecaVirtualSBV
             try
             {
                 SqlCommand cmd = new SqlCommand("NuevoLector", con);
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@IdLector", txtId.Text);
+                cmd.CommandType = CommandType.StoredProcedure;;
                 cmd.Parameters.AddWithValue("@CedulaLector", txtCedula.Text);
                 cmd.Parameters.AddWithValue("@NombreLector", txtNombre.Text);
                 cmd.Parameters.AddWithValue("@TelefonoLector", txtTelefono.Text);
@@ -185,13 +199,13 @@ namespace SistemaBibliotecaVirtualSBV
 
             MenuPrincipal MP = new MenuPrincipal();
             MP.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void FormLector_FormClosed(object sender, FormClosedEventArgs e)
         {
-            MenuPrincipal MP = new MenuPrincipal();
-            MP.Show();
+            //MenuPrincipal MP = new MenuPrincipal();
+            //MP.Show();
         }
 
         private void btnSeleccionar_Click(object sender, EventArgs e)

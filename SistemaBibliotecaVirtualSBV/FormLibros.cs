@@ -32,10 +32,10 @@ namespace SistemaBibliotecaVirtualSBV
                 SqlCommand cmd = new SqlCommand("InsertarLibro", con);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@Titulo", txtNombreLibro.Text);
-                cmd.Parameters.AddWithValue("@IdAutor1", txtAutor.Text);
-                cmd.Parameters.AddWithValue("@IdCategoria1", txtCategoria.Text);
+                cmd.Parameters.AddWithValue("@Autor", txtAutor.Text);
+                cmd.Parameters.AddWithValue("@Categoria", txtCategoria.Text);
                 cmd.Parameters.AddWithValue("@NumeroPaginas", txtNumPagina.Text);
-                cmd.Parameters.AddWithValue("@IdEditorial1", txtCodigoEditorial.Text);
+                cmd.Parameters.AddWithValue("@Editorial", txtCodigoEditorial.Text);
                 cmd.Parameters.AddWithValue("@FechaEdicion", txtFechaEdicion.Text);
                 cmd.Parameters.AddWithValue("@FechaPublicacion", txtFechaPublicacion.Text);
                 cmd.Parameters.AddWithValue("@Edicion", txtEdicion.Text);
@@ -64,10 +64,10 @@ namespace SistemaBibliotecaVirtualSBV
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@IdLibro", txtIdLibro.Text);
                 cmd.Parameters.AddWithValue("@Titulo", txtNombreLibro.Text);
-                cmd.Parameters.AddWithValue("@IdAutor1", txtAutor.Text);
-                cmd.Parameters.AddWithValue("@IdCategoria1", txtCategoria.Text);
+                cmd.Parameters.AddWithValue("@Autor", txtAutor.Text);
+                cmd.Parameters.AddWithValue("@Categoria", txtCategoria.Text);
                 cmd.Parameters.AddWithValue("@NumeroPaginas", txtNumPagina.Text);
-                cmd.Parameters.AddWithValue("@IdEditorial1", txtCodigoEditorial.Text);
+                cmd.Parameters.AddWithValue("@Editorial", txtCodigoEditorial.Text);
                 cmd.Parameters.AddWithValue("@FechaEdicion", txtFechaEdicion.Text);
                 cmd.Parameters.AddWithValue("@FechaPublicacion", txtFechaPublicacion.Text);
                 cmd.Parameters.AddWithValue("@Edicion", txtEdicion.Text);
@@ -208,8 +208,40 @@ namespace SistemaBibliotecaVirtualSBV
         private void btnVolver_Click(object sender, EventArgs e)
         {
             MenuPrincipal MenPri = new MenuPrincipal();
-            this.Close();
+            this.Hide();
             MenPri.Show();
+        }
+
+        private void FormLibro_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            MenuPrincipal MenPri = new MenuPrincipal();
+            this.Hide();
+            MenPri.Show();
+        }
+
+        private void btnGuardar_Click_1(object sender, EventArgs e)
+        {
+            IngresarNuevoLibro();
+            LimpiarTxt();
+            MostrarLibros(dataGridView1);
+        }
+
+        private void btnSeleccionar_Click_1(object sender, EventArgs e)
+        {
+            SeleccionarDatosDg();
+        }
+
+        private void btnActualizar_Click_1(object sender, EventArgs e)
+        {
+            ModificarLibro();
+            LimpiarTxt();
+            MostrarLibros(dataGridView1);
+        }
+
+        private void btnEliminar_Click_1(object sender, EventArgs e)
+        {
+            EliminarLibro();
+            MostrarLibros(dataGridView1);
         }
     }
 }
