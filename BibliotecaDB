@@ -1,0 +1,65 @@
+--BASE DE DATOS PROYECTO BIBLIOTECA VIRTUAL
+
+create database Biblioteca;
+use Biblioteca;
+
+/*Seccion Creacion de tablas*/
+create table Libros(
+IdLibro int,
+Titulo varchar(200),
+IdAutor1 int,
+Edicion varchar(200),
+AñoEdicion date,
+VecesPrestadas int,
+IdCategoria1 int,
+IdEditorial1 int,
+IdPrestamo1 int,
+Disponibilidad1 bit,
+primary key (IdLibro),
+constraint fk_fidA foreign key(IdAutor1) references Autor(IdAutor),
+constraint fk_fidC foreign key (IdCategoria1) references Categorias(IdCategoria),
+constraint fk_fidE foreign key (IdEditorial1) references Editorial(IdEditorial),
+constraint fk_fidEs foreign key (Disponibilidad1) references Estado(Disponibilidad)
+)
+
+create table Autor(
+IdAutor int,
+Autor varchar(200),
+constraint pk_pIda primary key (IdAutor)
+)
+
+create table Categorias(
+IdCategoria int,
+Categoria varchar(100)
+primary key (IdCategoria)
+)
+
+create table Editorial(
+IdEditorial int,
+NombreEditorial varchar(200),
+primary key(IdEditorial)
+)
+
+create table Lectores(
+IdLector int,
+CedulaLector bigint,
+NombreLector varchar(100),
+TelefonoLector bigint,
+DireccionLector varchar(200),
+primary key(IdLector)
+)
+
+create table Estado(
+IdEstado int,
+Disponibilidad bit,
+primary key(Disponibilidad)
+)
+
+create table Prestamo(
+IdPrestamo int,
+FechaSalida date,
+FechaDevolucion date,
+IdLector1 int,
+Primary key (IdPrestamo),
+foreign key (IdLector1) references Lectores(IdLector)
+)
