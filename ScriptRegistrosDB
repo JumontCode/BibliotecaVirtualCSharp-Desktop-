@@ -1,0 +1,85 @@
+/*Seccion insercion de los datos*/
+
+/*Tabla Libros*/
+select *from Libros
+insert into Libros (IdLibro,Titulo,IdAutor1,Edicion,AñoEdicion,VecesPrestadas,IdCategoria1,IdEditorial1,IdPrestamo1,Disponibilidad1) values (1,'Dos Mundos Un Camino',1,'Primera','2018-7-9',4,1,2,34,1)
+insert into Libros (IdLibro,Titulo,IdAutor1,Edicion,AñoEdicion,VecesPrestadas,IdCategoria1,IdEditorial1,IdPrestamo1,Disponibilidad1) values (2,'Don Quijote de la Mancha',2,'Cuarta','2014-5-1',4,4,6,3,0)
+insert into Libros (IdLibro,Titulo,IdAutor1,Edicion,AñoEdicion,VecesPrestadas,IdCategoria1,IdEditorial1,IdPrestamo1,Disponibilidad1) values (3,'Harry Potter',1,'Primera','2010-4-12',3,1,2,5,0)
+insert into Libros (IdLibro,Titulo,IdAutor1,Edicion,AñoEdicion,VecesPrestadas,IdCategoria1,IdEditorial1,IdPrestamo1,Disponibilidad1) values (4,'El Señor de los Anillos',4,'Octava','2014-1-5',4,17,2,7,0)
+insert into Libros (IdLibro,Titulo,IdAutor1,Edicion,AñoEdicion,VecesPrestadas,IdCategoria1,IdEditorial1,IdPrestamo1,Disponibilidad1) values (5,'Doña Barbara',1,'Quinta','2018-11-10',5,18,2,12,1)
+insert into Libros (IdLibro,Titulo,IdAutor1,Edicion,AñoEdicion,VecesPrestadas,IdCategoria1,IdEditorial1,IdPrestamo1,Disponibilidad1) values (6,'El Principito',1,'Segunda','2020-11-9',6,16,1,15,1)
+insert into Libros (IdLibro,Titulo,IdAutor1,Edicion,AñoEdicion,VecesPrestadas,IdCategoria1,IdEditorial1,IdPrestamo1,Disponibilidad1) values (7,'Cien Años de Soledad',1,'Cuarta','2018-7-9',7,1,7,21,0)
+insert into Libros (IdLibro,Titulo,IdAutor1,Edicion,AñoEdicion,VecesPrestadas,IdCategoria1,IdEditorial1,IdPrestamo1,Disponibilidad1) values (8,'Hamlet',1,'Sexta','2006-9-9',8,10,5,78,1)
+insert into Libros (IdLibro,Titulo,IdAutor1,Edicion,AñoEdicion,VecesPrestadas,IdCategoria1,IdEditorial1,IdPrestamo1,Disponibilidad1) values (9,'La Odisea',1,'Septima','2004-6-12',9,58,6,51,0)
+insert into Libros (IdLibro,Titulo,IdAutor1,Edicion,AñoEdicion,VecesPrestadas,IdCategoria1,IdEditorial1,IdPrestamo1,Disponibilidad1) values (10,'El Conde de Montecristo',10,'Novena','2000-7-8',4,15,3,24,0)
+
+/*Tabla Autores*/
+insert into Autor (IdAutor,Autor) values (1,'Pepe Veras')
+insert into Autor (IdAutor,Autor) values (2,'Jose Marte')
+insert into Autor (IdAutor,Autor) values (3,'Pablo Cohelo')
+insert into Autor (IdAutor,Autor) values (4,'Enrique Ureña')
+insert into Autor (IdAutor,Autor) values (5,'Pedro Mir')
+insert into Autor (IdAutor,Autor) values (6,'Salome Ureña')
+insert into Autor (IdAutor,Autor) values (7,'Juan Bosh')
+insert into Autor (IdAutor,Autor) values (8,'Camila Enriquez')
+insert into Autor (IdAutor,Autor) values (9,'Juan Pablo Duarte')
+insert into Autor (IdAutor,Autor) values (10,'Virgilio Diaz')
+
+/*Tabla Categoria*/
+select *from Categorias
+insert into Categorias(IdCategoria,Categoria) values (1,'Poemas')
+insert into Categorias(IdCategoria,Categoria) values (2,'Romance')
+insert into Categorias(IdCategoria,Categoria) values (3,'Fabula')
+insert into Categorias(IdCategoria,Categoria) values (4,'Cuento')
+insert into Categorias(IdCategoria,Categoria) values (5,'Leyenda')
+insert into Categorias(IdCategoria,Categoria) values (6,'Novela')
+insert into Categorias(IdCategoria,Categoria) values (7,'Drama')
+insert into Categorias(IdCategoria,Categoria) values (8,'Biografia')
+insert into Categorias(IdCategoria,Categoria) values (9,'Oda')
+insert into Categorias(IdCategoria,Categoria) values (10,'Historia')
+
+/*Tabla Editorial*/
+insert into Editorial(IdEditorial,NombreEditorial) values(1,'Santillana')
+insert into Editorial(IdEditorial,NombreEditorial) values(2,'Alienta')
+insert into Editorial(IdEditorial,NombreEditorial) values(3,'Austral')
+insert into Editorial(IdEditorial,NombreEditorial) values(4,'Destino')
+insert into Editorial(IdEditorial,NombreEditorial) values(5,'Diana')
+insert into Editorial(IdEditorial,NombreEditorial) values(6,'Corin')
+insert into Editorial(IdEditorial,NombreEditorial) values(7,'Peninsula')
+insert into Editorial(IdEditorial,NombreEditorial) values(8,'Paidós')
+insert into Editorial(IdEditorial,NombreEditorial) values(9,'Ariel')
+insert into Editorial(IdEditorial,NombreEditorial) values(10,'Geoplaneta')
+
+/*Tabla Lectores*/
+insert into Lectores(IdLector,CedulaLector,NombreLector,TelefonoLector,DireccionLector) values (1,00000000000,'Pedro Matos',8099999990,'Calle Paco Fish')
+insert into Lectores(IdLector,CedulaLector,NombreLector,TelefonoLector,DireccionLector) values (2,40269878965,'Julio Voltio',8095455856,'Calle Veneco Diaz')
+insert into Lectores(IdLector,CedulaLector,NombreLector,TelefonoLector,DireccionLector) values (3,42154789611,'Jose Diaz',8094547896,'Avenida Ureña')
+insert into Lectores(IdLector,CedulaLector,NombreLector,TelefonoLector,DireccionLector) values (4,00125489632,'Marcel Jazuq',8093456732,'Calle Luz')
+insert into Lectores(IdLector,CedulaLector,NombreLector,TelefonoLector,DireccionLector) values (5,12345678901,'Maria Victoria',8099467843,'Calle Paco Fish')
+insert into Lectores(IdLector,CedulaLector,NombreLector,TelefonoLector,DireccionLector) values (6,0019856385,'Juan Diaz',8094568798,'Calle Drill')
+insert into Lectores(IdLector,CedulaLector,NombreLector,TelefonoLector,DireccionLector) values (7,11111111111,'Gabriel Joseph',8091234532,'Calle Alvarez')
+insert into Lectores(IdLector,CedulaLector,NombreLector,TelefonoLector,DireccionLector) values (8,32564789102,'Carolina Maria',8094545687,'Calle Abanico')
+insert into Lectores(IdLector,CedulaLector,NombreLector,TelefonoLector,DireccionLector) values (9,45879632105,'Yunior Valdez',8099963566,'Calle Paco Perez')
+insert into Lectores(IdLector,CedulaLector,NombreLector,TelefonoLector,DireccionLector) values (10,0016589745,'Josue Montero',8097894561,'Calle Paco Jaime')
+
+/*Tabla Estado*/
+insert into Estado(IdEstado,Disponibilidad) values(1,1)
+insert into Estado(IdEstado,Disponibilidad) values(2,0)
+
+/*Tabla Prestamo*/
+insert into Prestamo(IdPrestamo,FechaSalida,FechaDevolucion,IdLector1) values (34,'2020-7-28','2020-1-2',1)
+insert into Prestamo(IdPrestamo,FechaSalida,FechaDevolucion,IdLector1) values (3,'2019-5-12','2019-5-20',1)
+insert into Prestamo(IdPrestamo,FechaSalida,FechaDevolucion,IdLector1) values (5,'2020-6-1','2020-6-12',1)
+insert into Prestamo(IdPrestamo,FechaSalida,FechaDevolucion,IdLector1) values (7,'2020-8-5','2020-12-2',1)
+insert into Prestamo(IdPrestamo,FechaSalida,FechaDevolucion,IdLector1) values (12,'2020-3-8','2020-3-25',1)
+insert into Prestamo(IdPrestamo,FechaSalida,FechaDevolucion,IdLector1) values (15,'2020-4-9','2020-4-10',1)
+insert into Prestamo(IdPrestamo,FechaSalida,FechaDevolucion,IdLector1) values (21,'2020-1-15','2020-1-17',1)
+insert into Prestamo(IdPrestamo,FechaSalida,FechaDevolucion,IdLector1) values (78,'2020-2-11','2020-2-12',1)
+insert into Prestamo(IdPrestamo,FechaSalida,FechaDevolucion,IdLector1) values (51,'2020-6-13','2020-6-14',1)
+insert into Prestamo(IdPrestamo,FechaSalida,FechaDevolucion,IdLector1) values (24,'2020-7-16','2020-7-18',1)
+
+/*Vista*/
+Select Titulo,IdAutor,Edicion,AñoEdicion,VecesPrestadas,IdCategoria1 from Libros
+inner join Autor on Libros.IdAutor1 = Autor.IdAutor
+inner join Editorial on Libros.IdEditorial1 = Editorial.IdEditorial
+inner join Categorias on Libros.IdCategoria1 = Categorias.IdCategoria
